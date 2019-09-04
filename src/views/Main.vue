@@ -1,7 +1,9 @@
 <template>
 <!--    <div>首页</div>-->
-  <el-container>
-    <el-header>Header</el-header>
+  <el-container direction="vertical">
+    <el-header style="height: 60px">
+      <Header></Header>
+    </el-header>
     <el-container>
       <el-aside>Aside</el-aside>
       <el-main>Main</el-main>
@@ -10,27 +12,29 @@
 </template>
 
 <script>
+  import Header  from "../components/Header";
     export default {
-        name: "Main"
+        name: "Main",
+        components:{Header}
     }
 </script>
 
 <style scoped>
   .el-header, .el-footer {
-    background-color: #545E6A;
+    background-color: #283647;
     color: honeydew;
     text-align: center;
-    line-height: 60px;
-    position: absolute; /* 置顶 */
-    top: 0;
+    position: absolute;
+    top: 0;   /* 置顶 */
     bottom: 0;
     width: 100%;
   }
 
   .el-aside {
-    background-color: #3D464F;
+    background-color: #3D464F; /* #545E6A */
     color: honeydew;
     text-align: center;
+    line-height: 160px;
     display: flex;
     position: absolute;
     top: 60px;
@@ -40,10 +44,10 @@
   }
 
   .el-main {
-    background-color: #283647;
-    color: honeydew;
+    background-color: snow;
+    color: black;
     text-align: center;
-    /*line-height: 160px;*/
+    line-height: 160px;
     display: flex;
     position: absolute;
     top: 60px;
